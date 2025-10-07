@@ -1,0 +1,33 @@
+"# Visual Studio .gitignore" 
+# Ignore Visual Studio user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build folders
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+.vs/
+
+# Ignore test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Ignore backup & cache
+*.bak
+*.cache
+*.tmp
+*.log
+
+# Ignore others
+*.dbmdl
+*.dbproj.schemaview
+*.pdb
+*.exe
+*.dll
+
+# Packages
+*.nupkg
+packages/
