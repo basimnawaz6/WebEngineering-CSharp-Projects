@@ -10,8 +10,7 @@ Each project demonstrates key programming and database concepts using **C#** and
 
 | # | Project Name | Description |
 |---|---------------|-------------|
-| 1 | **Hospital Management System** | A system to manage doctors, patients, and appointments using SQL Server. |
-| 2 | **Music Database App** | Allows users to store and manage music details like title, artist, and genre. |
+| 1 | **[Hospital Management System](./Hospital%20Management%20System)** | A system to manage doctors, patients, and appointments using SQL Server. |
 
 *(Add more as you complete new projects.)*
 
