@@ -38,29 +38,30 @@ The system follows a **4-tier architecture**:
 ## 🏗️ Project Structure
 
 Hospital/
-    DTO/
-        DoctorDTO.cs
-        PatientDTO.cs
-        AppointmentDTO.cs
-
-    DAL/
-        IDoctorDAL.cs
-        IPatientDAL.cs
-        IAppointmentDAL.cs
-        DoctorDAL.cs
-        PatientDAL.cs
-        AppointmentDAL.cs
-
-    BLL/
-        DoctorBLL.cs
-        PatientBLL.cs
-        AppointmentBLL.cs
-        Hospital.cs
-
-    PL/
-        DoctorPL.cs
-        PatientPL.cs
-        AppointmentPL.cs
-
-    Hospital/
-        Program.cs
+│
+├── DTO/
+│   ├── DoctorDTO.cs
+│   ├── PatientDTO.cs
+│   └── AppointmentDTO.cs
+│
+├── DAL/
+│   ├── IDoctorDAL.cs
+│   ├── IPatientDAL.cs
+│   ├── IAppointmentDAL.cs
+│   ├── DoctorDAL.cs
+│   ├── PatientDAL.cs
+│   └── AppointmentDAL.cs
+│
+├── BLL/
+│   ├── DoctorBLL.cs
+│   ├── PatientBLL.cs
+│   ├── AppointmentBLL.cs
+│   └── Hospital.cs
+│
+├── PL/
+│   ├── DoctorPL.cs
+│   ├── PatientPL.cs
+│   └── AppointmentPL.cs
+│
+└── Hospital/
+   └── Program.cs
