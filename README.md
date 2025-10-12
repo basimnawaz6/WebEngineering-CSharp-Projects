@@ -11,7 +11,7 @@ Each project demonstrates key programming and database concepts using **C#** and
 | # | Project Name | Description |
 |---|---------------|-------------|
 | 1 | **[Hospital Management System](./Hospital%20Management%20System)** | A system to manage doctors, patients, and appointments using SQL Server. |
-| 2 | **[Student Record](./studentrecord)** | A system to add and View studnts using file. |
+| 2 | **[Student Record](./StudentRecord)** | A system to add and View studnts using file. |
 
 *(Add more as you complete new projects.)*
 
