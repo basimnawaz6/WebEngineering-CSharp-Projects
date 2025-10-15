@@ -1,0 +1,155 @@
+﻿@model FeedBackWithUI.Models.Feedback
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Feedback</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        input[type="number"] {
+            max-width: 120px;
+        }
+
+        .validation-summary-errors {
+            color: #dc3545;
+            background: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .field-validation-error {
+            color: #dc3545;
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .input-validation-error {
+            border-color: #dc3545;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            color: #3498db;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📝 Submit Your Feedback</h2>
+
+        <div asp-validation-summary="All" class="validation-summary-errors"></div>
+
+        <form asp-action="GiveFeedback" method="post">
+            <div class="form-group">
+                <label asp-for="StudentName">Student Name</label>
+                <input asp-for="StudentName" required />
+                <span asp-validation-for="StudentName" class="field-validation-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Course">Course</label>
+                <input asp-for="Course" required />
+                <span asp-validation-for="Course" class="field-validation-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Comments">Comments</label>
+                <textarea asp-for="Comments" placeholder="Tell us what you think..."></textarea>
+                <span asp-validation-for="Comments" class="field-validation-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Rating">Rating (1–5)</label>
+                <input asp-for="Rating" type="number" min="1" max="5" required />
+                <span asp-validation-for="Rating" class="field-validation-error"></span>
+            </div>
+
+            <button type="submit">✅ Submit Feedback</button>
+        </form>
+
+        <a href="/Feedback/AllFeedbacks">👀 View All Feedbacks</a>
+        <br />
+        <a href="/Feedback/Index">🏠 Back to Home</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

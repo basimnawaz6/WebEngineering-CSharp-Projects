@@ -1,0 +1,15 @@
+﻿CREATE DATABASE FeedBack;
+GO
+
+USE FeedBack;
+GO
+
+CREATE TABLE Feedbacks
+(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    StudentName NVARCHAR(100) NOT NULL,
+    Course NVARCHAR(100) NOT NULL,
+    Comments NVARCHAR(MAX),
+    Rating INT NOT NULL,
+    DateSubmitted DATETIME NOT NULL
+);

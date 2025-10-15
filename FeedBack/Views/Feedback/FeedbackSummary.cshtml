@@ -1,0 +1,115 @@
+﻿@model FeedBackWithUI.Models.Feedback
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Submitted</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            margin: 0;
+            padding: 20px;
+            color: #2e7d32;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 25px;
+        }
+
+        .info {
+            background: #f1f8e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+            .info p {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            .info b {
+                color: #1b5e20;
+            }
+
+        .actions {
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 8px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #4caf50;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #2196f3;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎉 Feedback Submitted Successfully!</h2>
+
+        <div class="info">
+            <p><b>Name:</b> @Model.StudentName</p>
+            <p><b>Course:</b> @Model.Course</p>
+            <p><b>Comments:</b> @(string.IsNullOrEmpty(Model.Comments) ? "— No comments —" : Model.Comments)</p>
+            <p>
+                <b>Rating:</b>
+                <span class="rating">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        if (i <= Model.Rating)
+                        {
+                            <span>★</span>
+                        }
+                        else
+                        {
+                            <span>☆</span>
+                        }
+                    }
+                    (@Model.Rating/5)
+                </span>
+            </p>
+            <p><b>Date:</b> @Model.DateSubmitted.ToString("dd MMM yyyy HH:mm")</p>
+        </div>
+
+        <div class="actions">
+            <a href="/Feedback/AllFeedbacks" class="btn btn-primary">👀 View All Feedbacks</a>
+            <a href="/Feedback/GiveFeedback" class="btn btn-secondary">➕ Submit Another Feedback</a>
+            <a href="/Feedback/Index" class="btn btn-secondary">🏠 Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
