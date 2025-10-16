@@ -11,7 +11,7 @@ Each project demonstrates key programming and database concepts using **C#** and
 | # | Project Name | Description |
 |---|---------------|-------------|
 | 1 | **[Student Record](./StudentRecord)** | A system to add and view student records using file handling. |
-| 2 | **[Hospital Management System](./Hospital%20Management%20System)** | A system to manage doctors, patients, and appointments using SQL Server. |
+| 2 | **[Hospital Management System](./Hospital%20Management%20System)** | A system to manage doctors, patients, and appointments using SQL Server with N-tier architecture. |
 | 3 | **[Feedback Management System](./FeedBack)** | A system to submit and view feedback using MVC architecture and SQL Server. |
 
 ---
